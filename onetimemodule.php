@@ -14,6 +14,7 @@ use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Form\Form;
 use Joomla\Registry\Registry;
+use Joomla\CMS\Date\Date;
 
 class plgSystemOneTimeModule extends CMSPlugin
 {
@@ -48,23 +49,49 @@ class plgSystemOneTimeModule extends CMSPlugin
 
 		return true;
 	}
+
 	/**
 	 * Adds additional fields to forms with personal data
 	 *
-	 * @param  object  $module The module object.
-	 * @param  array $attribs The render atriputs
+	 * @param  object $module  The module object.
+	 * @param  array  $attribs The render atriputs
 	 *
 	 * @return  boolean
 	 *
 	 * @since   0.5.0
 	 */
-	function onRenderModule (&$module, &$attribs) {
+	function onRenderModule(&$module, &$attribs)
+	{
 		$params = new Registry ($module->params);
-		if ($params->get('onetime' , 0)) {
-			echo '<pre>', print_r($params, true), '</pre>';
-			//$module = null;
-		}
+		if ($params->get('onetime', 0) && $params->get('onetime_impressions', 0))
+		{
+			$app         = Factory::getApplication();
+			$name        = 'onetimemodule_' . $module->id;
+			$cookie      = $app->input->cookie->get($name, 0);
+			$impressions = $params->get('onetime_impressions', 0);
+			if ($cookie >= $impressions)
+			{
+				$module = false;
+			}
 
+			$rememder = $params->get('onetime_remember', 'always');
+			if ($cookie < $impressions && $rememder == 'temporarily')
+			{
+				$rememder_number = $params->get('onetime_remember_number', 1);
+				$rememder_value  = $params->get('onetime_remember_value', 'day');
+				$time            = new Date('now +' . $rememder_number . ' ' . $rememder_value);
+				$value           = $cookie + 1;
+				$expire          = $time->toUnix();
+				$app->input->cookie->set($name, $value, $expire, '/');
+			}
+			elseif ($rememder == 'always')
+			{
+				$time   = new Date('now +1 year');
+				$value  = ($cookie < $impressions)? $cookie + 1 : $cookie;
+				$expire = $time->toUnix();
+				$app->input->cookie->set($name, $value, $expire, '/');
+			}
+		}
 		return true;
 	}
 }
