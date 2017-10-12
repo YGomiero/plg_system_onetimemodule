@@ -7,4 +7,5 @@ Read this in other languages:
 [English](https://github.com/JoomlaZen/plg_system_onetimemodule/blob/master/README.md), 
 [Русский](https://github.com/JoomlaZen/plg_system_onetimemodule/blob/master/README.ru-RU.md).
 
+## Module settings
 ![System - One Time Module Plugin](https://screenshots.firefoxusercontent.com/images/e7d37302-1845-478b-8208-798612f46fd6.png)
