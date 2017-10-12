@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="onetimeshow">
+			<field name="onetime" type="radio"
+				   label="PLG_SYSTEM_ONETIMEMODULE_PARAMS_ACTIVE"
+				   class="btn-group btn-group-yesno"
+				   default="0">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="onetime_impressions" type="number"
+				   label="PLG_SYSTEM_ONETIMEMODULE_PARAMS_IMPRESSIONS"
+				   class="input-small"
+				   default="1"
+				   showon="onetime:1"/>
+			<field name="onetime_remember" type="radio"
+				   label="PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER"
+				   class="btn-group btn-group-yesno"
+				   default="always"
+				   showon="onetime:1">
+				<option value="always">PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER_ALWAYS</option>
+				<option value="temporarily">PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER_TEMPORARILY</option>
+			</field>
+			<field name="onetime_remember_number" type="number"
+				   label="PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER_TIME"
+				   default="1"
+				   min="1"
+				   step="1"
+				   showon="onetime:1[AND]onetime_remember:temporarily"/>
+			<field name="onetime_remember_value" type="list"
+				   label=" "
+				   default="day"
+				   showon="onetime:1[AND]onetime_remember:temporarily">
+				<option value="minutes">PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER_TIME_MINUTES</option>
+				<option value="hours">PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER_TIME_HOURS</option>
+				<option value="day">PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER_TIME_DAY</option>
+				<option value="week">PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER_TIME_WEEK</option>
+				<option value="month">PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER_TIME_MONTH</option>
+				<option value="year">PLG_SYSTEM_ONETIMEMODULE_PARAMS_REMEMBER_TIME_YEAR</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

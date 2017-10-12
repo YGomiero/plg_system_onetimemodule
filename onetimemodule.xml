@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_ONETIMEMODULE</name>
+	<author>JoomlaZen</author>
+	<creationDate>October 2017</creationDate>
+	<copyright>Copyright (c) 2016 - 2017 JoomlaZen. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@joomlazen.com</authorEmail>
+	<authorUrl>https://www.joomlazen.com</authorUrl>
+	<version>0.5.0</version>
+	<description>PLG_SYSTEM_ONETIMEMODULE_DESCRIPTION</description>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_onetimemodule.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_onetimemodule.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_onetimemodule.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_onetimemodule.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="onetimemodule">onetimemodule.php</filename>
+		<filename>form.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+		</fields>
+	</config>
+</extension>
