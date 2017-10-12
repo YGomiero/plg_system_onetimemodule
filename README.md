@@ -1,5 +1,5 @@
 # System - One Time Module Plugin
-Plugin add one time show options in modules
+Plugin adds the ability to show the module a certain number of times
 
 Supported Joomla versions: 3.8.0 or later
 
