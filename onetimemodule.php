@@ -87,11 +87,12 @@ class plgSystemOneTimeModule extends CMSPlugin
 			elseif ($rememder == 'always')
 			{
 				$time   = new Date('now +1 year');
-				$value  = ($cookie < $impressions)? $cookie + 1 : $cookie;
+				$value  = ($cookie < $impressions) ? $cookie + 1 : $cookie;
 				$expire = $time->toUnix();
 				$app->input->cookie->set($name, $value, $expire, '/');
 			}
 		}
+
 		return true;
 	}
 }
