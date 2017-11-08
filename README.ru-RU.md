@@ -6,7 +6,7 @@
 
 Прочесть на других языках: 
 [French]( https://github.com/YGomiero/plg_system_onetimemodule/blob/master/README.fr-FR.md ), 
-[English]( https://github.com/JoomlaZen/plg_system_onetimemodule/blob/master/README.en-GB.md ), 
+[English]( https://github.com/YGomiero/plg_system_onetimemodule/blob/master/README.en-GB.md ), 
 [Русский]( https://github.com/JoomlaZen/plg_system_onetimemodule/blob/master/README.ru-RU.md ).
 
 ## Настройки модуля
