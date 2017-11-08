@@ -1,9 +1,8 @@
 # System - One Time Module Plugin
-====================
 
-Release
+Telechargement Release
 ---------------------
-* Extension [Version 0.5FR](https://github.com/YGomiero/plg_system_onetimemodule/releases/tag/0.5-fr).
+* Extension [Version 0.5 FR](https://github.com/YGomiero/plg_system_onetimemodule/releases/tag/0.5-fr).
 
 Description
 ---------------------
@@ -18,3 +17,8 @@ Read this in other languages
 
 ## Paramètres du module
 ![System - One Time Module Plugin](https://image.prntscr.com/image/E3LSYMfJRnmQc9tKrz-5MQ.png)
+
+Copyright
+---------------------
+* Copyright (C) 2017 [JoomlaZen](https://github.com/JoomlaZen) All rights reserved.
+* Traduction FR Yann Gomiero
