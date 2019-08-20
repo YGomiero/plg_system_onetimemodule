@@ -11,7 +11,7 @@ Description
 
 Read this in other languages 
 ---------------------
-[French]( https://github.com/YGomiero/plg_system_onetimemodule/blob/master/README.fr-FR.md ), 
+[French]( https://github.com/YGomiero/plg_system_onetimemodule/blob/master/README.fr-FR.md )
 
 
 ## Paramètres du module
